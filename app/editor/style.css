@@ -19,9 +19,9 @@
 }
 
 /* placeholder */
-.tiptap p.is-editor-empty:first-child::before {
+div[data-placeholder="true"]::before {
   color: #585d61;
-  content: attr(data-placeholder);
+  content: attr(placeholder);
   float: left;
   height: 0;
   pointer-events: none;

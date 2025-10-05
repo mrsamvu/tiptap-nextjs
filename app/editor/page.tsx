@@ -226,15 +226,7 @@ export default function Editor() {
             </div>
             <TaleToolBar editor={editor} showTableToolBarMobile={showTableToolBarMobile} setShowTableToolBarMobile={setShowTableToolBarMobile}/>
                
-            {
-                isBrowser &&
-                    <DragHandle 
-                        editor={editor} 
-                        className="h-full cursor-grab transition-all"
-                    >
-                        <MdOutlineDragIndicator className="text-white/65 w-auto h-6"/>
-                    </DragHandle>
-            }
+            
             
             <BubbleMenu
                 editor={editor}
@@ -295,20 +287,23 @@ export default function Editor() {
                     </div>
                 </BubbleMenu>
             }
+            {
+                !isMobile &&
+                    <DragHandle 
+                        editor={editor} 
+                        className="h-full cursor-grab transition-all"
+                    >
+                        <MdOutlineDragIndicator className="text-white/65 w-auto h-6"/>
+                    </DragHandle>
+            }
             <EditorContent
+                data-placeholder={showPlaceholder}
+                placeholder="Write something..."
                 ref={editorRef}
-                spellCheck={false} 
-                // onClick={() => editor.chain().focus()} 
+                spellCheck={false}
                 editor={editor} 
-                className={`relative mt-[25px] pb-[50dvh] w-[700px] max-w-[95dvw] overflow-y-auto max-sm:max-w-[95dvw] ${isMobile ? '' : 'max-md:pl-3'} mx-auto flex-1 focus:outline-none`}
-            >
-                {
-                    showPlaceholder && (
-                        <div className="absolute top-0 text-gray-400 pointer-events-none select-none">
-                            Write something...
-                        </div>)
-                }
-            </EditorContent>
+                className={`mt-[25px] pb-[50dvh] w-[700px] max-w-[95dvw] overflow-y-auto max-sm:max-w-[95dvw] ${isMobile ? '' : 'max-md:pl-3'} mx-auto flex-1 focus:outline-none`}
+            />
         </div>
     );
 };
