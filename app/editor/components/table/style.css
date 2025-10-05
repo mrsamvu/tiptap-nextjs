@@ -1,0 +1,47 @@
+/* Table wrapper */
+.tiptap .tableWrapper {
+    @apply my-6 overflow-x-auto;
+}
+
+/* Table */
+.tiptap table {
+    @apply border-collapse m-0 overflow-hidden table-fixed w-full;
+}
+
+/* Cell styles */
+.tiptap table td,
+.tiptap table th {
+    @apply border box-border min-w-[1em] px-2 py-[6px] align-top relative;
+}
+
+/* Xoá margin cho phần tử bên trong cell */
+.tiptap table td>*,
+.tiptap table th>* {
+    @apply mb-0;
+}
+
+/* Header cell */
+.tiptap table th {
+    @apply bg-gray-100 font-bold text-left;
+}
+
+/* Selected cell overlay */
+.tiptap table .selectedCell::after {
+    content: '';
+    @apply absolute inset-0 bg-gray-200 pointer-events-none z-[2];
+}
+
+/* Column resize handle */
+.tiptap table .column-resize-handle {
+    @apply absolute top-0 -right-[2px] bottom-[-2px] w-1 bg-purple-500 pointer-events-none;
+}
+
+/* Cursor khi resize */
+.tiptap.resize-cursor {
+    cursor: col-resize;
+    /* Tailwind chưa có class sẵn */
+}
+
+.tiptap table .selectedCell::after {
+    @apply bg-gray-300 opacity-20
+}

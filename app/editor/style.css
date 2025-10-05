@@ -1,0 +1,59 @@
+.ProseMirror:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.drag-handle {
+    margin-top: 2px;
+    padding-right: 5px;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+}
+
+.tiptap.ProseMirror a, u {
+    @apply underline underline-offset-4
+}
+
+/* placeholder */
+.tiptap p.is-editor-empty:first-child::before {
+  color: #585d61;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+
+/* Đỏ & Hồng */
+.highlight-red       { @apply !bg-[#F7B8B0] dark:text-white dark:!bg-[#7A3A39]; }
+.highlight-orange    { @apply !bg-[#F7C1A6] dark:text-white dark:!bg-[#7A4635]; }
+.highlight-pink      { @apply !bg-[#F7B0CF] dark:text-white dark:!bg-[#7A3A5B]; }
+
+/* Tím & Xanh Chàm */
+.highlight-purple    { @apply !bg-[#D4B8F0] dark:text-white dark:!bg-[#6A4A84]; }
+.highlight-purple2   { @apply !bg-[#C7B3D9] dark:text-white dark:!bg-[#5E4A73]; }
+.highlight-indigo    { @apply !bg-[#B5C6EB] dark:text-white dark:!bg-[#465A84]; }
+
+/* Xanh Dương & Teal */
+.highlight-blue      { @apply !bg-[#A8CFF0] dark:text-white dark:!bg-[#3F5C84]; }
+.highlight-sky       { @apply !bg-[#A8E2F0] dark:text-white dark:!bg-[#3F6A84]; }
+.highlight-cyan      { @apply !bg-[#A8ECEC] dark:text-white dark:!bg-[#3F7070]; }
+.highlight-teal      { @apply !bg-[#A8D6D6] dark:text-white dark:!bg-[#336060]; }
+
+/* Xanh Lá */
+.highlight-green     { @apply !bg-[#B8E0C8] dark:text-white dark:!bg-[#40604D]; }
+.highlight-green2    { @apply !bg-[#C8F2A6] dark:text-white dark:!bg-[#446844]; }
+.highlight-lime      { @apply !bg-[#E0F7A8] dark:text-white dark:!bg-[#5C6840]; }
+
+/* Vàng & Cam */
+.highlight-yellow    { @apply !bg-[#F7F7B0] dark:text-white dark:!bg-[#665E3A]; }
+.highlight-gold      { @apply !bg-[#F7E7A8] dark:text-white dark:!bg-[#665339]; }
+.highlight-orange2   { @apply !bg-[#F7C8A8] dark:text-white dark:!bg-[#664A39]; }
+
+/* Trung Tính */
+.highlight-brown     { @apply !bg-[#D9B8A8] dark:text-white dark:!bg-[#5E4A40]; }
+.highlight-whitegray { @apply !bg-[#F7F7F7] dark:text-white dark:!bg-[#666666]; }

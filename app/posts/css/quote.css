@@ -1,0 +1,13 @@
+blockquote {
+    @apply dark:border-white/65 border-black/65 border-l-[2px] pl-4 my-2;
+}
+
+/* pullquote css */
+.pullquote {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    padding: 2rem;
+    text-align: center;
+    @apply border-t-[2px] dark:border-t-white/65 border-t-black/65 border-b-[2px] dark:border-b-white/65 border-b-black/65
+}

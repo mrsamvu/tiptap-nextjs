@@ -1,0 +1,27 @@
+.node-codeBlock {
+    @apply rounded-md
+}
+
+.code-block-wrapper {
+    position: relative;
+}
+
+.code-block-wrapper code div[data-node-view-content] {
+    @apply !whitespace-pre text-sm;
+}
+
+.code-block {
+    /* background: #2d2d2d; */
+    /* overflow-x: scroll;  */
+    color: #ccc;
+    @apply pt-[50px] py-[1rem] flex;
+    border-radius: 0.5rem;
+}
+
+.code-block .line span:last-child {    
+    @apply mr-[1rem];
+}
+
+/* .code-block span {    
+    @apply mr-[1rem];
+} */

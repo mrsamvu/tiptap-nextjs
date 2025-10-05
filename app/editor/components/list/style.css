@@ -1,0 +1,11 @@
+.tiptap ul[data-type="taskList"] li label {
+    @apply !mt-[1.5px];
+}
+
+.tiptap ul[data-type="taskList"] li {
+    @apply !mb-1.5
+}
+
+.tiptap ul[data-type="taskList"] li div {
+    @apply !text-wrap !block !break-words overflow-x-hidden
+}

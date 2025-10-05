@@ -1,0 +1,32 @@
+.tablist > div {
+    @apply !bg-transparent
+}
+
+.tablist .w-color-block {
+    @apply !bg-transparent !-mt-3 !-mb-3 mx-auto !w-[200px]
+}
+
+.tablist .w-color-block div:nth-child(1) {
+    @apply !hidden
+}
+
+.tablist {
+    @apply flex flex-col
+}
+
+.w-color-colorful {
+    @apply !mx-auto !w-[250px]
+}
+/* .tablist input {
+    @apply !h-[30px] !bg-[#212121] !text-white !border-none !outline-none
+}
+
+.w-color-editable-input {
+    @apply !border-none;
+    --editable-input-label-color: none;
+    --editable-input-box-shadow: none !important;
+}
+
+.w-color-swatch {
+    @apply !pl-[8px]
+} */
