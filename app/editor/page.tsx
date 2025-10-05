@@ -134,7 +134,7 @@ export default function Editor() {
         if (!editor) return;
 
         const updatePlaceholder = () => {
-            setShowPlaceholder(editor.isEmpty && editor.state.doc.content.size == 0);
+            setShowPlaceholder(editor.getText().length == 0);
         };
 
         // Gọi lần đầu
