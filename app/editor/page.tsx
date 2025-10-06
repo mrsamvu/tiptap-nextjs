@@ -276,13 +276,13 @@ export default function Editor() {
                             onClick={() => editor.commands.moveNodeDown()}
                             className="px-2 py-1 bg-[#151515] rounded"
                         >
-                            <BsArrowBarDown className="my-auto w-5 h-5"/>
+                            <BsArrowBarDown className="my-auto w-5 h-5 dark:text-white text-black"/>
                         </button>
                         <button
                             onClick={() => editor.commands.moveNodeUp()}
                             className="px-2 py-1 bg-[#151515] rounded"
                         >
-                            <BsArrowBarUp className="my-auto w-5 h-5"/>
+                            <BsArrowBarUp className="my-auto w-5 h-5 dark:text-white text-black"/>
                         </button>
                     </div>
                 </BubbleMenu>
